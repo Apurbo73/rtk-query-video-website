@@ -37,7 +37,7 @@ export default function Video() {
           <div className="col-span-full w-full space-y-8 lg:col-span-2">
             {content}
           </div>
-                {video?.id ?<RelatedVideos /> :
+                {video?.id ?<RelatedVideos video={video} /> :
                 isLoading? <RelatedVideoLoader></RelatedVideoLoader>: 
                 <Error message="Something went wrong"></Error>}
         </div>
